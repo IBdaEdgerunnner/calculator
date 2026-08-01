@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<style>
+    /* body */
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: system-ui, sans-serif;
+    }
+    /* body work */
+    .calculator{
+        background: #eef0ff;
+        border-radius: 20px;
+        width: 250px;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    /* screen */
+    input{
+        border-radius: 20px;
+        border: none;
+        width: 240px;
+        height: 30px;
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding-right: 15px;
+        outline: none;
+        box-sizing: border-box;
+        text-align: right;
+    }
+
+    /* keypad container */
+    .keypad{
+        padding: 10px;
+        margin-top: 10px;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* buttons */
+    button{
+        padding: 15px 15px;
+        background-color: rgb(209, 209, 226);
+        border-radius: 20px;
+        border: #A3A19E;
+        font-size: medium;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background: rgb(121, 121, 134);
+    }
+
+    button:active{
+        transform: scale(0.95);
+    }
+
+    .btn{
+        background-color: #474644;
+        color: rgb(231, 231, 231);
+    }
+</style>
+
+<body>
+    <div class="calculator">
+        <div class="screen">
+            <input type="text" value="0" readonly>
+        </div>
+
+        <div class="keypad">
+            <button style="background-color: rgb(116, 6, 6); color: rgb(238, 8, 8);">C</button>
+            <button class="btn" ></button>
+            <button class="btn" style="color: rgb(255, 4, 4);">X</button>
+            <button class="btn">/</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="btn">x</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="btn">+</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="btn">-</button>
+
+            <button>0</button>
+            <button>.</button>
+            <button class="btn" style="grid-column: span 2;">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
